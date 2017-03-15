@@ -1,0 +1,24 @@
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: inherit;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"] {
+  appearance: none;
+}
+
+textarea {
+	resize: vertical;
+}

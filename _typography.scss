@@ -1,0 +1,19 @@
+html {
+	font-size: $font-size-base;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	font-family: $font-family-base;
+	line-height: $line-height-base;
+	font-weight: $font-weight-normal;
+	color: $text-color;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	hypens: auto;
+}
+
+strong {
+	font-weight: $font-weight-bold;
+}
