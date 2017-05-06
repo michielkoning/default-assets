@@ -7,6 +7,60 @@
 	}
 }
 
-@mixin grid-equal-columns($columns) {
+%row {
+	display: flex;
+	@supports (display: grid) {
+		display: grid;
+	}
+	margin: 0 ceil(($gutter / -2));
+	> * {
+		padding: 0 ceil(($gutter / 2));
+	}
 
+}
+
+@mixin grid-equal-columns($columns) {
+	$string: "";
+  @for $i from 1 through $columns {
+  	$string: $string + "1fr ";
+  }
+	grid-template-columns: unquote($string);
+	> * {
+		flex: 0 0 100% / $columns;
+	}
+}
+
+
+
+%col {
+  position: relative;
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left:  ceil(($gutter / 2));
+  padding-right: floor(($gutter / 2));
+
+}
+
+@mixin make-grid-columns() {
+  @for $i from (1 + 1) through 12 {
+    $list: "#{$list}, %col-xs-#{$i}, %col-sm-#{$i}, %col-md-#{$i}, %col-lg-#{$i}";
+  }
+
+  #{$list} {
+  	@extend %col;
+  }
+}
+
+@mixin create-grid-columns(){
+
+}
+
+
+%col-md-8 {
+	width: 25%;
+}
+
+%col-md-4 {
+	width: 25%;
 }
