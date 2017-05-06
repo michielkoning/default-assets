@@ -16,7 +16,6 @@
 	> * {
 		padding: 0 ceil(($gutter / 2));
 	}
-
 }
 
 @mixin grid-equal-columns($columns) {
@@ -26,7 +25,7 @@
   }
 	grid-template-columns: unquote($string);
 	> * {
-		flex: 0 0 100% / $columns;
+		flex: 0 0 (100% / $columns);
 	}
 }
 
@@ -42,6 +41,7 @@
 
 
 @mixin col($sm: null, $md: null, $lg: null, $xlg: null) {
+	@extend %col;
 	@if $sm {
 		@include breakpoint(sm) {
 			width: percentage($sm / 12);
@@ -62,30 +62,4 @@
 			width: percentage($xlg / 12);
 		}
 	}
-}
-
-
-
-
-@mixin make-grid-columns() {
-  @for $i from (1 + 1) through 12 {
-    $list: "#{$list}, %col-xs-#{$i}, %col-sm-#{$i}, %col-md-#{$i}, %col-lg-#{$i}";
-  }
-
-  #{$list} {
-  	@extend %col;
-  }
-}
-
-@mixin create-grid-columns(){
-
-}
-
-
-%col-md-8 {
-	width: 25%;
-}
-
-%col-md-4 {
-	width: 25%;
 }
