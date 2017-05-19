@@ -8,7 +8,7 @@
 		object-fit: cover;
 	}
 
-	&__content {
+	&__wrapper {
 		justify-content: center;
 		align-items: center;
 		text-align: center;
@@ -21,8 +21,7 @@
 		padding: 1rem;
 	}
 
-	&__title {
-		color: #fff;
-		text-shadow: 1px 1px 1px #000;
+	&__content {
+		@include center;
 	}
 }
