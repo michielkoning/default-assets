@@ -25,7 +25,7 @@
 }
 
 
-@mixin breakpoint-min-max($breakpoint-min, $breakpoint-max) {
+@mixin breakpoint-range($breakpoint-min, $breakpoint-max) {
   // Retrieves the value from the key
   $value-min: map-get($breakpoints, $breakpoint-min);
   $value-max: map-get($breakpoints, $breakpoint-max);
