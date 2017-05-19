@@ -8,15 +8,29 @@ textarea {
   line-height: inherit;
 }
 
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"] {
+label {
+	&:after {
+		content: ":";
+	}
+	@if ($labels-bold) {
+		font-weight: 700;
+	}
+}
+
+@include text-inputs {
   appearance: none;
+	display: block;
+  width: 100%;
+  border: 1px solid $input-border;
+  border-radius: $input-border-radius;
+  padding: $padding-base-vertical $padding-base-horizontal;
+	background-color: #fff;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+
+}
+
+@include text-inputs(false) {
+	height: $line-height-computed;
 }
 
 textarea {

@@ -30,13 +30,8 @@
 }
 
 %col {
-  position: relative;
-  // Prevent columns from collapsing when empty
-  min-height: 1px;
-  // Inner gutter via padding
   padding-left:  ceil(($gutter / 2));
   padding-right: floor(($gutter / 2));
-
 }
 
 

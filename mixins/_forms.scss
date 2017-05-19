@@ -1,5 +1,7 @@
 @mixin text-inputs($textarea: true) {
 	@if ($textarea) {
+		textarea,
+		input[type=text],
 		input[type=search],
 		input[type=email],
 		input[type=url],
@@ -13,7 +15,7 @@
 			@content;
 		}
 	} else {
-		textarea,
+		input[type=text],
 		input[type=search],
 		input[type=email],
 		input[type=url],

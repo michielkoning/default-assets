@@ -17,3 +17,11 @@ body {
 strong {
 	font-weight: $font-weight-bold;
 }
+
+address {
+	font-style: normal;
+}
+
+p {
+	hanging-punctuation: first;
+}
