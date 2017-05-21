@@ -3,3 +3,74 @@
 	text-align: center;
 	padding: 0.25em 0.5em;
 }
+
+%btn {
+	display: inline-block;
+	margin-bottom: 0; // For input.btn
+	font-weight: $font-weight-bold;
+	text-align: center;
+	vertical-align: middle;
+	touch-action: manipulation;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	padding: .5em .5em;
+	font-size: 1.2em;
+	border-radius: .25em;
+	transition: background-color .3s, border-color .3s;
+
+	&:focus {
+		@include tab-focus;
+	}
+
+	&--primary {
+		@extend %btn;
+		color: $white;
+		background-color: $color-primary;
+		&:hover {
+			background-color: $color-primary-dark;
+		}
+		&:focus {
+			outline-color: $color-primary;
+		}
+	}
+
+	&--action {
+		@extend %btn;
+		color: $white;
+		background-color: $color-action;
+		&:hover {
+			background-color: $color-action-dark;
+		}
+		&:focus {
+			outline-color: $color-action;
+		}
+	}
+
+	&--outline {
+		@extend %btn;
+		color: $text-color;
+		border: 1px solid $text-color;
+		&:hover {
+			background-color: $text-color;
+			color: $white;
+		}
+	}
+
+	&--secondary {
+		@extend %btn;
+		color: $black;
+		border-color: $grey;
+		&:hover {
+			border-color: $grey-dark;
+		}
+		&:focus {
+			outline-color: $grey;
+		}
+	}
+
+
+	&--block {
+		display: block;
+		width: 100%;
+	}
+}
