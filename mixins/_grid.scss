@@ -1,5 +1,6 @@
 @mixin sticky-footer {
 	body {
+		flex-direction: column;
 		display: flex;
 	}
 	.main {
@@ -9,11 +10,9 @@
 
 %row {
 	display: flex;
-	grid-column-gap: $gutter;
-	@supports (display: grid) {
-		display: grid;
-	}
-	margin: 0 ceil(($gutter / -2));
+	grid-column-gap: $gutter / 2;
+	display: grid;
+	//margin: 0 ceil(($gutter / -2));
 }
 
 @mixin grid-equal-columns($columns) {
@@ -28,8 +27,7 @@
 }
 
 %col {
-  padding-left:  ceil(($gutter / 2));
-  padding-right: floor(($gutter / 2));
+	flex: 0 0 auto;
 }
 
 
@@ -56,3 +54,5 @@
 		}
 	}
 }
+
+
