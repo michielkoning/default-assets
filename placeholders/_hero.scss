@@ -25,6 +25,11 @@
 		@include center;
 	}
 
+	&__text {
+		color: $white;
+		text-shadow: 1px 1px 1px #000;
+	}
+
 	&__title {
 		color: $white;
 		text-shadow: 1px 1px 1px #000;
