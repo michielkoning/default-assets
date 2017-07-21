@@ -39,21 +39,3 @@
   }
 }
 
-
-%center {
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-	padding-left:  $gutter / 2;
-	padding-right: $gutter / 2;
-	@include breakpoint(m) {
-		padding-left:  $gutter;
-		padding-right: $gutter;
-	}
-}
-
-@mixin center($width: l) {
-  $value: map-get($centers, $width);
-	max-width: $value;
-	@extend %center;
-}

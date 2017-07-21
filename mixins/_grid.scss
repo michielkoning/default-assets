@@ -8,26 +8,30 @@
 	}
 }
 
+
+@mixin col {
+	padding: 0 ($gutter / 2);
+}
+
 %row {
 	display: flex;
-	grid-column-gap: $gutter / 2;
+	//grid-column-gap: $gutter / 2;
 	display: grid;
-	//margin: 0 ceil(($gutter / -2));
+	margin: 0 ceil(($gutter / -2));
+	> * {
+		@include col;
+	}
 }
 
 @mixin grid-equal-columns($columns) {
-	$string: "";
-  @for $i from 1 through $columns {
-  	$string: $string + "1fr ";
-  }
-	grid-template-columns: unquote($string);
+	grid-template-columns: repeat($columns, 1fr);
 	> * {
 		flex: 0 0 (100% / $columns);
 	}
 }
 
 %col {
-	flex: 0 0 auto;
+	padding: 0 ($gutter / 2);
 }
 
 
@@ -55,4 +59,20 @@
 	}
 }
 
+%center {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	padding-left:  $gutter / 2;
+	padding-right: $gutter / 2;
+	@include breakpoint(m) {
+		padding-left:  $gutter;
+		padding-right: $gutter;
+	}
+}
 
+@mixin center($width: l) {
+  $value: map-get($centers, $width);
+	max-width: $value;
+	@extend %center;
+}
