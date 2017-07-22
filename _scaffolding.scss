@@ -21,6 +21,6 @@ body {
 	margin: 0;
 }
 
-ul {
-	margin: 0 0 1em;
+p:empty {
+  display: none;
 }
