@@ -1,70 +1,75 @@
-
-
 @mixin col {
-	padding-left: ($gutter / 2);
-	padding-right: ($gutter / 2);
+  padding-left: ($gutter / 2);
+  padding-right: ($gutter / 2);
 }
 
 %row {
-	display: flex;
-	//grid-column-gap: $gutter / 2;
-	display: grid;
-	> * {
-		@include col;
-	}
+  display: flex;
+  //grid-column-gap: $gutter / 2;
+  display: grid;
+
+  > * {
+    @include col;
+  }
 }
 
 @mixin grid-equal-columns($columns) {
-	@extend %row;
-	grid-template-columns: repeat($columns, 1fr);
-	> * {
-		flex: 0 0 (100% / $columns);
-	}
+  @extend %row;
+  grid-template-columns: repeat($columns, 1fr);
+
+  > * {
+    flex: 0 0 (100% / $columns);
+  }
 }
 
 %col {
-	padding-left: ceil($gutter / 2);
-	padding-right: ceil($gutter / 2);
+  padding-left: ceil($gutter / 2);
+  padding-right: ceil($gutter / 2);
 }
 
 @mixin col($sm: null, $md: null, $lg: null, $xlg: null) {
-	@extend %col;
-	@if $sm {
-		@include breakpoint(sm) {
-			width: percentage($sm / 12);
-		}
-	}
-	@if $md {
-		@include breakpoint(md) {
-			width: percentage($md / 12);
-		}
-	}
-	@if $lg {
-		@include breakpoint(lg) {
-			width: percentage($lg / 12);
-		}
-	}
-	@if $xlg {
-		@include breakpoint(xlg) {
-			width: percentage($xlg / 12);
-		}
-	}
+  @extend %col;
+
+  @if $sm {
+    @include breakpoint(sm) {
+      width: percentage($sm / 12);
+    }
+  }
+
+  @if $md {
+    @include breakpoint(md) {
+      width: percentage($md / 12);
+    }
+  }
+
+  @if $lg {
+    @include breakpoint(lg) {
+      width: percentage($lg / 12);
+    }
+  }
+
+  @if $xlg {
+    @include breakpoint(xlg) {
+      width: percentage($xlg / 12);
+    }
+  }
 }
 
 %center {
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-	padding-left: ceil($gutter);
-	padding-right: ceil($gutter);
-	@include breakpoint(m) {
-		padding-left:  $gutter;
-		padding-right: $gutter;
-	}
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: ceil($gutter);
+  padding-right: ceil($gutter);
+  width: 100%;
+
+  @include breakpoint(m) {
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
 }
 
 @mixin center($width: l) {
   $value: map-get($centers, $width);
-	max-width: $value;
-	@extend %center;
+  max-width: $value;
+  @extend %center;
 }

@@ -1,39 +1,39 @@
 %h-reset {
-	margin: 0;
-	padding: 0;
-	hyphens: none;
+  margin: 0;
+  padding: 0;
+  hyphens: none;
 }
 
 %h1 {
-	@extend %h-reset;
-	line-height: $line-height-headings;
-	font-size: 3em;
-	font-weight: $font-weight-normal;
-	margin-bottom: .5em;
+  @extend %h-reset;
+  line-height: $line-height-headings;
+  font-size: 3em;
+  font-weight: $font-weight-normal;
+  margin-bottom: .5em;
 }
 
 %h2 {
-	@extend %h-reset;
-	line-height: $line-height-headings;
-	font-weight: $font-weight-bold;
-	font-size: 1.8em;
-	margin-bottom: .25em;
+  @extend %h-reset;
+  line-height: $line-height-headings;
+  font-weight: $font-weight-bold;
+  font-size: 1.6em;
+  margin-bottom: .25em;
 }
 
 %h3 {
-	@extend %h-reset;
-	line-height: $line-height-headings;
+  @extend %h-reset;
+  line-height: $line-height-headings;
 }
 
 %h4 {
-	@extend %h-reset;
-	line-height: $line-height-headings;
+  @extend %h-reset;
+  line-height: $line-height-headings;
 }
 
 %h5 {
-	@extend %h-reset;
+  @extend %h-reset;
 }
 
 %h6 {
-	@extend %h-reset;
+  @extend %h-reset;
 }
