@@ -18,12 +18,11 @@
   // If the key exists in the map
   @if $value != null {
     // Prints a media query based on the value
-    @media (max-width: $value) {
+    @media (max-width: $value - 1) {
       @content;
     }
   }
 }
-
 
 @mixin breakpoint-range($breakpoint-min, $breakpoint-max) {
   // Retrieves the value from the key
@@ -33,7 +32,7 @@
   // If the key exists in the map
   @if $value-min != null {
     // Prints a media query based on the value
-		@media (min-width: $value-min) and (max-width : $value-max) {
+    @media (min-width: $value-min) and (max-width: $value-max - 1) {
       @content;
     }
   }
