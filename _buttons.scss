@@ -1,15 +1,15 @@
 button {
-	@extend %button;
-	overflow: visible;
-	border: 0;
-	font: inherit;
-	-webkit-font-smoothing: inherit;
-	letter-spacing: inherit;
-	background: none;
-	margin-bottom: 0; // For input.btn
-	vertical-align: middle;
-	touch-action: manipulation;
-	background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-	border: 1px solid transparent;
-	white-space: nowrap;
+  @extend %button;
+  overflow: visible;
+  border: 0;
+  font: inherit;
+  -webkit-font-smoothing: inherit;
+  letter-spacing: inherit;
+  background: none;
+  margin-bottom: 0; // For input.btn
+  vertical-align: middle;
+  touch-action: manipulation;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  white-space: nowrap;
 }
