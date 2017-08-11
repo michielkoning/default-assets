@@ -24,7 +24,6 @@
   }
 }
 
-
 @mixin breakpoint-range($breakpoint-min, $breakpoint-max) {
   // Retrieves the value from the key
   $value-min: map-get($breakpoints, $breakpoint-min);
@@ -33,27 +32,22 @@
   // If the key exists in the map
   @if $value-min != null {
     // Prints a media query based on the value
-		@media (min-width: $value-min) and (max-width : $value-max) {
+    @media (min-width: $value-min) and (max-width: $value-max) {
       @content;
     }
   }
 }
 
-
 %center {
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-	padding-left:  $gutter / 2;
-	padding-right: $gutter / 2;
-	@include breakpoint(m) {
-		padding-left:  $gutter;
-		padding-right: $gutter;
-	}
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-left: $gutter;
+  padding-right: $gutter;
 }
 
 @mixin center($width: l) {
   $value: map-get($centers, $width);
-	max-width: $value;
-	@extend %center;
+  max-width: $value;
+  @extend %center;
 }
