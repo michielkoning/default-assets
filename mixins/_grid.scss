@@ -18,16 +18,7 @@
 }
 
 @mixin grid-equal-columns($columns) {
-  $string: "";
-
-  @for $i from 1 through $columns {
-    $string: $string + "1fr ";
-  }
-  grid-template-columns: unquote($string);
-
-  > * {
-    flex: 0 0 (100% / $columns);
-  }
+  grid-template-columns: repeat($columns, 1fr);
 }
 
 %col {
