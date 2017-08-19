@@ -1,5 +1,0 @@
-@mixin icon($size: 1em) {
-	width: $size;
-	height: $size;
-	@extend %icon;
-}

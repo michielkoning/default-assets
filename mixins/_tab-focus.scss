@@ -1,6 +1,0 @@
-// WebKit-style focus
-
-@mixin tab-focus($color: #fff) {
-  outline: none;
-  box-shadow: 0 0 1px rgba($color, .7);
-}
