@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+images/*
+theme/*
+theme/
+settings/
+favicons/*
+package.json
+theme.json
