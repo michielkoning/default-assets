@@ -1,0 +1,19 @@
+$gutter: 1rem;
+$center: 78rem;
+
+$centers: (
+  s: 55rem,
+  m: 62rem,
+  l: 78rem
+);
+$screen-s: 35em;
+$screen-m: 50em;
+$screen-l: 62em;
+$screen-xl: 78em;
+
+$breakpoints: (
+  sm: $screen-s,
+  md: $screen-m,
+  lg: $screen-l,
+  xlg: $screen-xl
+);

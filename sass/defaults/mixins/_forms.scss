@@ -1,0 +1,32 @@
+@mixin text-inputs($textarea: true) {
+  @if ($textarea) {
+    textarea,
+    input[type=text],
+    input[type=search],
+    input[type=email],
+    input[type=url],
+    input[type=tel],
+    input[type=number],
+    input[type=range],
+    input[type=date],
+    input[type=month],
+    input[type=week],
+    input[type=time] {
+      @content;
+    }
+  } @else {
+    input[type=text],
+    input[type=search],
+    input[type=email],
+    input[type=url],
+    input[type=tel],
+    input[type=number],
+    input[type=range],
+    input[type=date],
+    input[type=month],
+    input[type=week],
+    input[type=time] {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.footer {
+  @include block-padding;
+  color: #cecece;
+  background: #424242;
+
+  &__wrapper {
+    @include center;
+    @extend %row;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__links-list {
+    @include list-unstyled();
+    margin-bottom: 1em;
+  }
+
+  &__social {
+    @include breakpoint-max(md) {
+      grid-column: 1 / 3;
+    }
+  }
+
+  a:hover {
+    @include link-decoration();
+  }
+}
+
+.social {
+  &__list {
+    @include list-unstyled;
+    @include breakpoint-max(md) {
+      text-align: center;
+    }
+  }
+
+  &__list-item {
+    display: inline-block;
+  }
+
+  &__icon {
+    @include icon(3em);
+  }
+}

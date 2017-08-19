@@ -1,0 +1,43 @@
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: inherit;
+
+  &:focus {
+    border-color: $color-primary;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(255, 0, 0, .6);
+  }
+}
+
+label {
+  &:after {
+    content: ':';
+  }
+
+  @if ($labels-bold) {
+    font-weight: 700;
+  }
+}
+
+@include text-inputs {
+  appearance: none;
+  background-color: #fff;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid $input-border;
+  border-radius: $input-border-radius;
+  display: block;
+  padding: $padding-base-vertical $padding-base-horizontal;
+  width: 100%;
+}
+
+@include text-inputs(false) {
+  height: $line-height-computed;
+}
+
+textarea {
+  resize: vertical;
+}

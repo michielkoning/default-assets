@@ -1,0 +1,14 @@
+@import "mixins/base";
+@import "placeholders/base";
+
+
+// [converter] This is defined recursively in LESS, but Sass supports real loops
+@mixin loop-grid-columns($columns, $class, $type) {
+  @for $i from 0 through $columns {
+    @include calc-grid-column($i, $class, $type);
+  }
+}
+
+@mixin make-grid($class) {
+  @include loop-grid-columns($grid-columns, $class, width);
+}

@@ -1,0 +1,42 @@
+.facilities {
+  background: $color-4;
+
+  @include block-padding;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  &__wrapper {
+    @include center;
+  }
+
+  &__overview {
+    @extend %row;
+
+    @include breakpoint(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__column {
+    padding-left: 3em;
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include icon(2em);
+  }
+
+  &__list {
+    @include list-unstyled;
+    margin-bottom: 1em;
+  }
+}

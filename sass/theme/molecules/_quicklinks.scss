@@ -1,0 +1,28 @@
+.quicklinks {
+  background: $color-1;
+  color: $color-3;
+  padding: 1em 1em 1.5em;
+
+  &__list {
+    @include list-unstyled;
+    padding-top: .5em;
+  }
+
+  li {
+    padding-bottom: .5em;
+  }
+
+  a {
+    @extend %h4;
+    display: block;
+    padding-right: 2em;
+    position: relative;
+  }
+}
+
+.quicklink__icon {
+  @include icon;
+  position: absolute;
+  right: 0;
+  top: .2em;
+}

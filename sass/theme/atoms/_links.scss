@@ -1,0 +1,11 @@
+a {
+	color: currentColor;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+	.content & {
+		text-decoration-skip: ink;
+		text-decoration: underline;
+	}
+}

@@ -1,0 +1,20 @@
+.menu {
+	display: flex;
+	flex: 1 1 auto;
+	margin: 0 -1em;
+	&__trigger {
+		@include breakpoint(sm) {
+			display: none;
+		}
+	}
+
+	&-item {
+		padding: 0 1em;
+	}
+
+	&__list {
+		@include list-unstyled();
+		display: flex;
+	}
+
+}

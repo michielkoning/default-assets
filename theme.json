@@ -1,0 +1,14 @@
+{
+  "name": "Adler Lingenau",
+  "color": "#da532c",
+  "url": "http://localhost/wordpress/adler",
+  "liveUrl": "https://adler.michielkoning.nl/",
+  "theme": "adler",
+  "defaultIcons": [
+    "linkedin-square",
+    "twitter-square",
+    "facebook-square",
+    "tripadvisor",
+    "zoover"
+  ]
+}

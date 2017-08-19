@@ -1,0 +1,1 @@
+<div class="visuallyhidden"><!-- inject:svg --><!-- endinject --></div>

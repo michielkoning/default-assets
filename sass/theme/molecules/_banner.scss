@@ -1,0 +1,49 @@
+$rating-size: 18px;
+$rating-margin: 2px;
+$rating-color: #528c38;
+
+.banner {
+  align-items: center;
+  background: $color-4;
+  display: flex;
+  padding: 1em;
+
+  &__icon {
+    width: 6em;
+    height: 4em;
+    margin-right: $gutter;
+  }
+
+  &__title {
+    color: #424242;
+    font-weight: $font-bold;
+    margin-bottom: .25em;
+  }
+
+  &__rating {
+    position: relative;
+    margin-bottom: .25em;
+    width: #{($rating-size + $rating-margin) * 5};
+    background-image: radial-gradient(($rating-size / 2) at 50% 50%, #fff (($rating-size / 2) - 2), $rating-color (($rating-size / 2) - 1), transparent ($rating-size / 2));
+
+    &,
+    &:before {
+      height: $rating-size;
+      background-size: ($rating-size + $rating-margin) $rating-size;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      background-image: radial-gradient(($rating-size / 2) at 50% 50%, $rating-color 0%, $rating-color (($rating-size / 2) - 4), transparent (($rating-size / 2) - 3));
+    }
+
+    &--4:before {
+      width: #{($rating-size + $rating-margin) * 4};
+    }
+
+    &--5:before {
+      width: #{($rating-size + $rating-margin) * 5};
+    }
+  }
+}

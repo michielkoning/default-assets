@@ -1,0 +1,77 @@
+.archive-item {
+  background: $color-1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.5em;
+  position: relative;
+
+  @include breakpoint(lg) {
+    grid-row: 1 / 4;
+    //margin-right: 1em;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__image-wrapper {
+    position: relative;
+  }
+
+  &__image {
+    display: block;
+    height: 14em;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &__price {
+    background-color: $color-2;
+    border-radius: 50%;
+    color: $white;
+    font-family: 'Roboto Slab', serif;
+    height: 6em;
+    line-height: 1.1;
+    margin-top: -3em;
+    padding-top: 1em;
+    position: absolute;
+    right: -.5em;
+    text-align: center;
+    top: 50%;
+    width: 6em;
+
+    @include breakpoint(lg) {
+      right: -1.5em;
+    }
+  }
+
+  &__price-label {
+    font-weight: $font-light;
+  }
+
+  &__price-value {
+    font-size: 2rem;
+    font-weight: $font-bold;
+  }
+
+  &__text {
+    flex: 1 1 auto;
+    padding: 1em 1em 1.5em;
+  }
+
+  &__link {
+    @extend %button;
+    align-self: center;
+    background: $color-primary;
+    border-radius: .25em;
+    color: $white;
+    flex: 0 1 auto;
+    font-weight: 700;
+    margin: 0 1em;
+    padding: .25em 2em;
+
+    &:hover {
+      background: $color-primary-dark;
+    }
+  }
+}
